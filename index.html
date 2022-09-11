@@ -1094,7 +1094,8 @@
 
         console.log("Srs: " + srs);
 
-        document.getElementById("MainContent_InfectionProbabilityCalculations_lblEOS").textContent = srs * 1000;
+        srs = srs * 1000
+        document.getElementById("MainContent_InfectionProbabilityCalculations_lblEOS").textContent = srs.toFixed(4);
       }
     </script>
   </body>
