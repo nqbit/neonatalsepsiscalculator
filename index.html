@@ -1,547 +1,1099 @@
-<!DOCTYPE html>
-<html style="" class=" js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients no-cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths" lang="en"><head>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script async="" src="Infection%20Probability%20Calculator%20-%20Neonatal%20Sepsis%20Calculator_files/analytics.js"></script><script src="Infection%20Probability%20Calculator%20-%20Neonatal%20Sepsis%20Calculator_files/analytics_002.js" type="text/javascript"></script>
-<script type="text/javascript">window.addEventListener('DOMContentLoaded',function(){var v=archive_analytics.values;v.service='wb';v.server_name='wwwb-app202.us.archive.org';v.server_ms=514;archive_analytics.send_pageview({});});</script>
-<script type="text/javascript" src="Infection%20Probability%20Calculator%20-%20Neonatal%20Sepsis%20Calculator_files/bundle-playback.js" charset="utf-8"></script>
-<script type="text/javascript" src="Infection%20Probability%20Calculator%20-%20Neonatal%20Sepsis%20Calculator_files/wombat.js" charset="utf-8"></script>
-<link rel="stylesheet" type="text/css" href="Infection%20Probability%20Calculator%20-%20Neonatal%20Sepsis%20Calculator_files/banner-styles.css">
-<link rel="stylesheet" type="text/css" href="Infection%20Probability%20Calculator%20-%20Neonatal%20Sepsis%20Calculator_files/iconochive.css">
-<!-- End Wayback Rewrite JS Include -->
-<meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="description" content="Neonatal Sepsis Calculator"><meta name="author" content="DOR IT-Development"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>
-	Infection Probability Calculator - Neonatal Sepsis Calculator
-</title><script src="Infection%20Probability%20Calculator%20-%20Neonatal%20Sepsis%20Calculator_files/modernizr"></script>
-<link href="Infection%20Probability%20Calculator%20-%20Neonatal%20Sepsis%20Calculator_files/css.css" rel="stylesheet">
-<!-- <link href="https://web.archive.org/web/20211026170202im_/https://neonatalsepsiscalculator.kaiserpermanente.org/favicon.ico" rel="shortcut icon" type="image/x-icon">  -->
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script
+      src="Infection%20Probability%20Calculator%20-%20Neonatal%20Sepsis%20Calculator_files/analytics_002.js"
+      type="text/javascript"
+    ></script>
+    <script
+      type="text/javascript"
+      src="Infection%20Probability%20Calculator%20-%20Neonatal%20Sepsis%20Calculator_files/bundle-playback.js"
+      charset="utf-8"
+    ></script>
+    <script
+      type="text/javascript"
+      src="Infection%20Probability%20Calculator%20-%20Neonatal%20Sepsis%20Calculator_files/wombat.js"
+      charset="utf-8"
+    ></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="Infection%20Probability%20Calculator%20-%20Neonatal%20Sepsis%20Calculator_files/banner-styles.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="Infection%20Probability%20Calculator%20-%20Neonatal%20Sepsis%20Calculator_files/iconochive.css"
+    />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="Neonatal Sepsis Calculator" />
+    <meta name="author" content="DOR IT-Development" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Infection Probability Calculator - Neonatal Sepsis Calculator</title>
+    <script src="Infection%20Probability%20Calculator%20-%20Neonatal%20Sepsis%20Calculator_files/modernizr"></script>
+    <link
+      href="Infection%20Probability%20Calculator%20-%20Neonatal%20Sepsis%20Calculator_files/css.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://neonatalsepsiscalculator.kaiserpermanente.org/favicon.ico"
+      rel="shortcut icon"
+      type="image/x-icon"
+    />
+    <link
+      href="Infection%20Probability%20Calculator%20-%20Neonatal%20Sepsis%20Calculator_files/WebResource.html"
+      type="text/css"
+      rel="stylesheet"
+    />
 
-<link href="Infection%20Probability%20Calculator%20-%20Neonatal%20Sepsis%20Calculator_files/WebResource.html" type="text/css" rel="stylesheet"></head>
-<body onload="reloadTool();">
-    <form method="post" action="neonatalsepsiscalculator.kaiserpermanente.org.html" id="ctl01">
-<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="7K1LmZSnPF3Qqk6t1AtTWd9U6VlTiEvaR9X9p0kSdv07Z+zCJ7WiSk0if4x8wuJ6Gn5A4v7YK9yukfPQexpxjzEb4mOiLtBBgmVZsQRQZiU+xdAS8P3JKbZaJxO1p3LRkO/ymfjXkt2jTInF7tVFl7rlmPVj2Bxq+EEBOg1lAktOoezyaeuQky/xYr99xmAtTMZLuKB8mt1gKMujADBkEFtu/mbJ9HxCPe6JF8Z0LH4oFWU+jrT6WhgXJy/yjK3qLGnygC3IbHowoD/3vdDgA4U2JYKFBwqgkIwtWGvqDaymPQlT42DM15B4uMXFtjXFMEmAeyYQRP8zhJNdq+/s//AxJ14Mr/dD+1ZM9jlscwemxgXJmp/5pDHUkONQBpS3DQyO7mKi6ZJwCZ19wgcHzSptB2ZXKRm4l92m7KG01STkFMDfuR+4V4OXB4YafnBx+SYCU8/cM2lZBMjn+BmAQXfb46jakhsqJqWpe3cI6kw4DWgnvMbh3ySQ1DU86cVAwadqwH+aClD1B7I2FEH5rogpCO/dNOsvwvPVQUXTupzckoc3Bdh8D4e/d18W0wX6G4ZaWw3bfETfQQ5n2V99SNEk1q+s+RyXVwfzuzH8SI0Lx2AlKfvAhetIKODn83ssYsiU2wbrR94zzo35Uyj8YM5u5JnjE5/VFvBuLRG21EGFD/BeQxZrjvsRfRAl4/z5mut4Btdu5qSVQsCs1hsDI8QrOcnt26K34T8TDACS5Z8=">
+    <link
+      href="Infection%20Probability%20Calculator%20-%20Neonatal%20Sepsis%20Calculator_files/WebResource.html"
+      type="text/css"
+      rel="stylesheet"
+    />
+    <script src="index.js"></script>
+  </head>
+  <body>
+    <form id="ctl01" onsubmit="formSubmit(event)">
+      <script
+        src="Infection%20Probability%20Calculator%20-%20Neonatal%20Sepsis%20Calculator_files/MsAjaxJs"
+        type="text/javascript"
+      ></script>
+      <script
+        src="Infection%20Probability%20Calculator%20-%20Neonatal%20Sepsis%20Calculator_files/jquery-1.10.2.min.js"
+        type="text/javascript"
+      ></script>
+      <script
+        src="Infection%20Probability%20Calculator%20-%20Neonatal%20Sepsis%20Calculator_files/bootstrap.min.js"
+        type="text/javascript"
+      ></script>
+      <script
+        src="Infection%20Probability%20Calculator%20-%20Neonatal%20Sepsis%20Calculator_files/respond.min.js"
+        type="text/javascript"
+      ></script>
+      <script
+        src="Infection%20Probability%20Calculator%20-%20Neonatal%20Sepsis%20Calculator_files/WebFormsJs"
+        type="text/javascript"
+      ></script>
+      <script
+        src="Infection%20Probability%20Calculator%20-%20Neonatal%20Sepsis%20Calculator_files/index.html"
+        type="text/javascript"
+      ></script>
 
-
-<script src="Infection%20Probability%20Calculator%20-%20Neonatal%20Sepsis%20Calculator_files/MsAjaxJs" type="text/javascript"></script>
-<script src="Infection%20Probability%20Calculator%20-%20Neonatal%20Sepsis%20Calculator_files/jquery-1.10.2.min.js" type="text/javascript"></script>
-<script src="Infection%20Probability%20Calculator%20-%20Neonatal%20Sepsis%20Calculator_files/bootstrap.min.js" type="text/javascript"></script>
-<script src="Infection%20Probability%20Calculator%20-%20Neonatal%20Sepsis%20Calculator_files/respond.min.js" type="text/javascript"></script>
-<script src="Infection%20Probability%20Calculator%20-%20Neonatal%20Sepsis%20Calculator_files/WebFormsJs" type="text/javascript"></script>
-<script src="Infection%20Probability%20Calculator%20-%20Neonatal%20Sepsis%20Calculator_files/ScriptResource.html" type="text/javascript"></script>
-<script src="Infection%20Probability%20Calculator%20-%20Neonatal%20Sepsis%20Calculator_files/index_002.html" type="text/javascript"></script>
-<script src="Infection%20Probability%20Calculator%20-%20Neonatal%20Sepsis%20Calculator_files/index.html" type="text/javascript"></script>
-<script src="Infection%20Probability%20Calculator%20-%20Neonatal%20Sepsis%20Calculator_files/ScriptResource_002.html" type="text/javascript"></script>
-<script src="Infection%20Probability%20Calculator%20-%20Neonatal%20Sepsis%20Calculator_files/index_003.html" type="text/javascript"></script>
-<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="1BA5D46B">
-<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="LaFkLjTu265+JkebkKvxPWjNUMyCtyBeXRDYPw+OhDZ6/0RrW/YKH8Veq6TcVOOauu+LfzY5QAh0DzTPwpO6FNMRbmQMAamqoL8lgQk627qw3zec1LtlUho/M4PTHh0I6s7loqqAk68iH2szBQ3s8+WmI1TABlFkwMsmx1bPaXU9y8yKB4C/IGAu5yhWGRZFKcNFPF2cT3CMi77Gmd2l73GgT0OHORRegxv9ABCF/2QXufG1+Qy6azC1SzHLS5V7v3yzDKeo4Zb6qwNAvUrqCyA3nHoy5jKNkKPhTlxfjsaFJG+9Ouwdc/Z2emD/hWovhdo3eGnqf4J4iFP1jTcDkJepQC9Iy7hZJ9JVepJZ+rJp8WD7sjWLetQ7vlqKDjIEWNp2CMBBHrVzsV/5CLUg/A8tTNBOrAFzVCx5/7LQHrvAjoU2cegqzVJq2guP1rcrj8n+pGlGBgdI2thyPm8rR2/iJpVbx3coE0omur0kXd+zGedV3WLFeXqe4KlqeQXxUQwNPiqHEsyLz+6GR3Xi7pQWYvdB63/BCCh7dH9AzdepcscdFI9hOV9F2cvon7UDSsI+uVDDbs+dbKUCE08T0ALXoFHJC9TQsQQFL65EN3noouRKmcbr5eGqypzPPlyvFqHraDjwTIEwyNF5FwFAZM1BfWewimf4siFcvtnAKX7qQxF8uC4KRxjZf/sjkX16gOCuVMalkBcvHTbeGzCnRH4V5O70QOu8nbM//NOC24rFTztB4mEhDemW0tVdxgjB">        
-        
-
-        <div id="top_bg">       
-            <div class="container">                
-                <div class="row">
-                    <div class="col-sm-7 col-md-10">               
-                        <h3 id="Logo1" class="txtcolwhite" style="margin-left: -15px;">Neonatal Early-Onset Sepsis Calculator</h3>
-                        <h3 id="Logo2" class="txtcolwhite">Neonatal Early-Onset Sepsis Calculator
-                        </h3>
-                    </div>
-                    <div class="col-sm-3 col-sm-offset-2 col-md-2 col-md-offset-0">
-                        <img id="Title1" src="Infection%20Probability%20Calculator%20-%20Neonatal%20Sepsis%20Calculator_files/kpresearchlogo-big-lb.png" alt="KP Research Logo" style="margin-left: -15px;">
-                        <img id="Title2" src="Infection%20Probability%20Calculator%20-%20Neonatal%20Sepsis%20Calculator_files/kpresearchlogo-big-lb.png" alt="KP Research Logo">
-                    </div>
-                </div>                     
-            </div>       
+      <div id="top_bg">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-7 col-md-10">
+              <h3 id="Logo1" class="txtcolwhite" style="margin-left: -15px">
+                Neonatal Early-Onset Sepsis Calculator
+              </h3>
+              <h3 id="Logo2" class="txtcolwhite">
+                Neonatal Early-Onset Sepsis Calculator
+              </h3>
+            </div>
+            <div class="col-sm-3 col-sm-offset-2 col-md-2 col-md-offset-0">
+              <img
+                id="Title1"
+                src="Infection%20Probability%20Calculator%20-%20Neonatal%20Sepsis%20Calculator_files/kpresearchlogo-big-lb.png"
+                alt="KP Research Logo"
+                style="margin-left: -15px"
+              />
+              <img
+                id="Title2"
+                src="Infection%20Probability%20Calculator%20-%20Neonatal%20Sepsis%20Calculator_files/kpresearchlogo-big-lb.png"
+                alt="KP Research Logo"
+              />
+            </div>
+          </div>
         </div>
+      </div>
 
-        <div id="Nav2">
-            <nav class="navbar navbar-default ">
-                <div class="container">
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                    </div>
-                    <div id="navbar" class="navbar-collapse collapse">
-                        <ul class="nav navbar-nav">
-                            <!-- <li><a id="HyperLink1" href="https://web.archive.org/web/20211026170202/https://neonatalsepsiscalculator.kaiserpermanente.org/InfectionProbabilityCalculator.aspx">Home</a></li>
-                            <li><a id="HyperLink2" href="https://web.archive.org/web/20211026170202/https://neonatalsepsiscalculator.kaiserpermanente.org/Classification.aspx">Classification</a></li>
-                            <li><a id="HyperLink3" href="https://web.archive.org/web/20211026170202/https://neonatalsepsiscalculator.kaiserpermanente.org/References.aspx">References</a></li>
-                            <li><a id="HyperLink7" href="https://web.archive.org/web/20211026170202/https://neonatalsepsiscalculator.kaiserpermanente.org/GenFAQ.aspx">General FAQ</a></li>
-                            <li><a id="HyperLink8" href="https://web.archive.org/web/20211026170202/https://neonatalsepsiscalculator.kaiserpermanente.org/EmrFAQ.aspx">FAQ for EMR Implementation</a></li> -->
-                        </ul>
-                    </div>
-                </div>
-            </nav>            
-        </div>
-        
-        <div id="Nav1">
-            <nav class="navbar navbar-default">
-                <div class="container" style="padding-left:0px;">                
-                    <div id="navbar1">
-                        <ul class="nav navbar-nav">                           
-                            <!-- <li><a id="HyperLink4" href="https://web.archive.org/web/20211026170202/https://neonatalsepsiscalculator.kaiserpermanente.org/InfectionProbabilityCalculator.aspx">Home</a></li>
-                            <li><a id="HyperLink5" href="https://web.archive.org/web/20211026170202/https://neonatalsepsiscalculator.kaiserpermanente.org/Classification.aspx">Classification</a></li>
-                            <li><a id="HyperLink6" href="https://web.archive.org/web/20211026170202/https://neonatalsepsiscalculator.kaiserpermanente.org/References.aspx">References</a></li>
-                            <li><a id="HyperLink9" href="https://web.archive.org/web/20211026170202/https://neonatalsepsiscalculator.kaiserpermanente.org/GenFAQ.aspx">General FAQ</a></li>
-                            <li><a id="HyperLink10" href="https://web.archive.org/web/20211026170202/https://neonatalsepsiscalculator.kaiserpermanente.org/EmrFAQ.aspx">FAQ for EMR Implementation</a></li> -->
-                        </ul>                     
-                    </div>
-                </div>
-            </nav>
-        </div>
-        
-        <div class="container body-content"> 
-            <div style="height: 5px;"></div>                            
-                
-    <script type="text/javascript">
-        function WebForm_FireDefaultButton(event, target) {
+      <div id="Nav2">
+        <nav class="navbar navbar-default">
+          <div class="container">
+            <div class="navbar-header">
+              <button
+                type="button"
+                class="navbar-toggle collapsed"
+                data-toggle="collapse"
+                data-target="#navbar"
+                aria-expanded="false"
+                aria-controls="navbar"
+              >
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                <li>
+                  <a id="HyperLink1" href="">Home</a>
+                </li>
+                <li>
+                  <a id="HyperLink2" href="">Classification</a>
+                </li>
+                <li>
+                  <a id="HyperLink3" href="">References</a>
+                </li>
+                <li>
+                  <a id="HyperLink7" href="">General FAQ</a>
+                </li>
+                <li>
+                  <a id="HyperLink8" href="">FAQ for EMR Implementation</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+
+      <div id="Nav1">
+        <nav class="navbar navbar-default">
+          <div class="container" style="padding-left: 0px">
+            <div id="navbar1">
+              <ul class="nav navbar-nav">
+                <li>
+                  <a id="HyperLink4" href="">Home</a>
+                </li>
+                <li>
+                  <a id="HyperLink5" href="">Classification</a>
+                </li>
+                <li>
+                  <a id="HyperLink6" href="">References</a>
+                </li>
+                <li>
+                  <a id="HyperLink9" href="">General FAQ</a>
+                </li>
+                <li>
+                  <a id="HyperLink10" href="">FAQ for EMR Implementation</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+
+      <div class="container body-content">
+        <div style="height: 5px"></div>
+
+        <script type="text/javascript">
+          function WebForm_FireDefaultButton(event, target) {
             if (event.keyCode == 13) {
-                // this variable has to be added
-                var __nonMSDOMBrowser =
-                    (window.navigator.appName.toLowerCase().indexOf('explorer') == -1);
+              // this variable has to be added
+              var __nonMSDOMBrowser =
+                window.navigator.appName.toLowerCase().indexOf("explorer") ==
+                -1;
 
-                var src = event.srcElement || event.target;
-                if (!src || (src.tagName.toLowerCase() != "textarea")) {
-                    var defaultButton;
-                    if (__nonMSDOMBrowser) {
-                        defaultButton = document.getElementById(target);
-                    }
-                    else {
-                        defaultButton = document.all[target];
-                    }
-                    if (defaultButton && typeof (defaultButton.click) != "undefined") {
-                        defaultButton.click();
-                        event.cancelBubble = true;
-                        if (event.stopPropagation) event.stopPropagation();
-                        return false;
-                    }
+              var src = event.srcElement || event.target;
+              if (!src || src.tagName.toLowerCase() != "textarea") {
+                var defaultButton;
+                if (__nonMSDOMBrowser) {
+                  defaultButton = document.getElementById(target);
+                } else {
+                  defaultButton = document.all[target];
                 }
+                if (
+                  defaultButton &&
+                  typeof defaultButton.click != "undefined"
+                ) {
+                  defaultButton.click();
+                  event.cancelBubble = true;
+                  if (event.stopPropagation) event.stopPropagation();
+                  return false;
+                }
+              }
             }
             return true;
-        }
-    </script>
-   
-    <!-- Main Image -->
-    <div class="jumbotron img-main">
-        <div class="row">
-            <div class="col-xs-12 col-sm-8 col-lg-6">              
-                <h3>
-                    <span id="MainContent_lblWelcomeMessage">Probability of Neonatal Early-Onset Sepsis Based on Maternal Risk Factors and the Infant's Clinical Presentation</span>
-                </h3>
-                <p class="text-message1">
-                    <span id="MainContent_lblSubMessage1" class="text-message1">The
- tool below is intended for the use of clinicians trained and 
-experienced in the care of newborn infants. Using this tool, the risk of
- early-onset sepsis can be calculated in an infant born <u>&gt;</u> 34 
-weeks gestation. The interactive calculator produces the probability of 
-early onset sepsis per 1000 babies by entering values for the specified 
-maternal risk factors along with the infant's clinical presentation.</span>
-                </p>
-            </div>            
-            <div class="col-xs-6 col-lg-6">
+          }
+        </script>
+
+        <!-- Main Image -->
+        <div class="jumbotron img-main">
+          <div class="row">
+            <div class="col-xs-12 col-sm-8 col-lg-6">
+              <h3>
+                <span id="MainContent_lblWelcomeMessage"
+                  >Probability of Neonatal Early-Onset Sepsis Based on Maternal
+                  Risk Factors and the Infant's Clinical Presentation</span
+                >
+              </h3>
+              <p class="text-message1">
+                <span id="MainContent_lblSubMessage1" class="text-message1"
+                  >The tool below is intended for the use of clinicians trained
+                  and experienced in the care of newborn infants. Using this
+                  tool, the risk of early-onset sepsis can be calculated in an
+                  infant born <u>&gt;</u> 34 weeks gestation. The interactive
+                  calculator produces the probability of early onset sepsis per
+                  1000 babies by entering values for the specified maternal risk
+                  factors along with the infant's clinical presentation.</span
+                >
+              </p>
             </div>
+            <div class="col-xs-6 col-lg-6"></div>
+          </div>
         </div>
-    </div>
 
-    <div style="height:10px"></div>
-        
-    <div id="MainContent_pnlMain" onkeypress="javascript:return WebForm_FireDefaultButton(event, 'MainContent_btnDefault')">
-	
-        <div id="MainContent_UpdatePanel1">
-		                                                     
-                
+        <div style="height: 10px"></div>
 
-<script type="text/javascript">
-    function disableKeyPress() {
-        if (event.keyCode == 13) {
-            event.returnValue = false;
-            event.cancel = true;
-        }
-    }
-</script>
+        <div
+          id="MainContent_pnlMain"
+          onkeypress="javascript:return WebForm_FireDefaultButton(event, 'MainContent_btnDefault')"
+        >
+          <div id="MainContent_UpdatePanel1">
+            <script type="text/javascript">
+              function disableKeyPress() {
+                if (event.keyCode == 13) {
+                  event.returnValue = false;
+                  event.cancel = true;
+                }
+              }
+            </script>
 
-<script>
-    $(document).ready(function () {
-        $('[data-toggle="tooltip"]').tooltip();
-    });
-</script>
+            <script>
+              $(document).ready(function () {
+                $('[data-toggle="tooltip"]').tooltip();
+              });
+            </script>
 
-<div id="MainContent_InfectionProbabilityCalculations_pnlCalc">
-			
-    <div class="panel panel-primary" style="border-color: #d0d0d0;">
-        <div class="panel-body"> 
-            <div class="row">
-                <!-- Form Fields Section -->
-                <div class="col-md-5">
-                    <h4>Please enter details below.</h4>
-                    <table class="table table-bordered">
+            <div id="MainContent_InfectionProbabilityCalculations_pnlCalc">
+              <div class="panel panel-primary" style="border-color: #d0d0d0">
+                <div class="panel-body">
+                  <div class="row">
+                    <!-- Form Fields Section -->
+                    <div class="col-md-5">
+                      <h4>Please enter details below.</h4>
+                      <table class="table table-bordered">
                         <thead>
-                            <tr>
-                                <th class="wid40">Predictor</th>
-                                <th class="wid60">Scenario</th>
-                            </tr>
+                          <tr>
+                            <th class="wid40">Predictor</th>
+                            <th class="wid60">Scenario</th>
+                          </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td class="td-title">Incidence of Early-Onset Sepsis&nbsp;<a href="" data-toggle="tooltip" title="" data-original-title="Select rate of Early-Onset Sepsis at Your institution. KPNC rate =.3/1000 live births and CDC National rate = .5/1000 live births."><span class="glyphicon glyphicon-question-sign"></span></a></td>
-                                <td>
-                                    <select name="ctl00$MainContent$InfectionProbabilityCalculations$ddlIncidence" id="MainContent_InfectionProbabilityCalculations_ddlIncidence" tabindex="1" class="form-control">
-				<option selected="selected" value="0"></option>
-				<option value="38.952265">0.1/1000 live births</option>
-				<option value="39.646367">0.2/1000 live births</option>
-				<option value="40.05280">0.3/1000 live births (KPNC incidence)</option>
-				<option value="40.34150">0.4/1000 live births</option>
-				<option value="40.56560">0.5/1000 live births (CDC national incidence)</option>
-				<option value="40.74890">0.6/1000 live births</option>
-				<option value="40.903919">0.7/1000 live births</option>
-				<option value="41.0384">0.8/1000 live births</option>
-				<option value="41.1571">0.9/1000 live births</option>
-				<option value="41.263432">1/1000 live births</option>
-				<option value="41.965852">2/1000 live births</option>
-				<option value="42.676976">4/1000 live births</option>
-
-			</select>
-                                    
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="td-title">Gestational age&nbsp;<a href="" data-toggle="tooltip" title="" data-original-title="To the nearest week and day."><span class="glyphicon glyphicon-question-sign"></span></a></td>
-                                <td>
-                                    <div class="input-group">
-                                        <input name="ctl00$MainContent$InfectionProbabilityCalculations$txtGestational" maxlength="2" id="MainContent_InfectionProbabilityCalculations_txtGestational" tabindex="2" class="form-control" onkeydown="disableKeyPress();" type="number">                                          
-                                        <span class="input-group-addon" style="width: 65px">weeks</span>
-                                    </div>
-                                    <div class="input-group">
-                                        <input name="ctl00$MainContent$InfectionProbabilityCalculations$txtDays" maxlength="1" id="MainContent_InfectionProbabilityCalculations_txtDays" tabindex="3" class="form-control" onkeydown="disableKeyPress()" type="number">                                      
-                                        <span class="input-group-addon" style="width: 65px">days</span>
-                                    </div>
-                                    
-                                    
-
-                                    
-
-                                    
-
-                                    
-
-                                    
-
-                                            
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="td-title">Highest maternal antepartum temperature&nbsp;<a href="" data-toggle="tooltip" title="" data-original-title="To the nearest 0.1 degree. Be sure to choose Fahrenheit or Celsius."><span class="glyphicon glyphicon-question-sign"></span></a></td>
-                                <td>                                    
-                                    <div class="col-lg-6" style="padding-left:0px;max-width:200px;">
-                                        <div class="input-group">       
-                                                                        
-                                                    
-                                            <input name="ctl00$MainContent$InfectionProbabilityCalculations$txtTemperature" maxlength="5" id="MainContent_InfectionProbabilityCalculations_txtTemperature" tabindex="4" class="form-control" onkeydown="disableKeyPress()" type="number" step="any" style="min-width:83px">                                             
-                                            <div class="input-group-btn">    
-                                                <select name="ctl00$MainContent$InfectionProbabilityCalculations$ddlFarCal" id="MainContent_InfectionProbabilityCalculations_ddlFarCal" tabindex="5" class="form-control">
-				<option selected="selected" value="F">Fahrenheit</option>
-				<option value="C">Celsius</option>
-
-			</select>                                          
-                                            </div>                      
-                                                                        
-                                                                        
-                                                                        
-                                                                        
-                                                                        
-                                                                        
-                                           
-                                        </div>
-                                    </div>
-                                   
-                                    
-                                    <div id="MainContent_InfectionProbabilityCalculations_UpdatePanel2">
-				
-                                            
-                                            
-                                        
-			</div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="td-title">ROM (Hours)&nbsp;<a href="" data-toggle="tooltip" title="" data-original-title="Duration of rupture of membranes. (In hours to the nearest 0.1 hour.)"><span class="glyphicon glyphicon-question-sign"></span></a></td>
-                                <td>                                   
-                                    <input name="ctl00$MainContent$InfectionProbabilityCalculations$txtROM" maxlength="3" id="MainContent_InfectionProbabilityCalculations_txtROM" tabindex="6" class="form-control" onkeydown="disableKeyPress()" type="number" step="any">                                  
-                                    
-                                    
-                                    
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="td-title">Maternal GBS status&nbsp;<a href="" data-toggle="tooltip" title="" data-original-title="Choose GBS positive, negative or unknown."><span class="glyphicon glyphicon-question-sign"></span></a></td>
-                                <td>                             
-                                    <span id="MainContent_InfectionProbabilityCalculations_rbGBS" class="radio"><input id="MainContent_InfectionProbabilityCalculations_rbGBS_0" type="radio" name="ctl00$MainContent$InfectionProbabilityCalculations$rbGBS" value="0" tabindex="7"><label for="MainContent_InfectionProbabilityCalculations_rbGBS_0">Negative</label><br><input id="MainContent_InfectionProbabilityCalculations_rbGBS_1" type="radio" name="ctl00$MainContent$InfectionProbabilityCalculations$rbGBS" value="1" tabindex="7"><label for="MainContent_InfectionProbabilityCalculations_rbGBS_1">Positive</label><br><input id="MainContent_InfectionProbabilityCalculations_rbGBS_2" type="radio" name="ctl00$MainContent$InfectionProbabilityCalculations$rbGBS" value="2" tabindex="7"><label for="MainContent_InfectionProbabilityCalculations_rbGBS_2">Unknown</label></span>                             
-                                    
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="td-title">Type of intrapartum antibiotics&nbsp;<a href="" data-toggle="tooltip" title="" data-original-title="Please select only 1 category. If both Broad spectrum and GBS-specific intrapartum antibiotics were given, please select the appropriate timing among the Broad spectrum categories."><span class="glyphicon glyphicon-question-sign"></span></a></td>
-                                <td>                             
-                                    <span id="MainContent_InfectionProbabilityCalculations_rbIntrapartum" class="radio"><input id="MainContent_InfectionProbabilityCalculations_rbIntrapartum_0" type="radio" name="ctl00$MainContent$InfectionProbabilityCalculations$rbIntrapartum" value="Broad spectrum antibiotics &gt; 4 hrs prior to birth" tabindex="8"><label for="MainContent_InfectionProbabilityCalculations_rbIntrapartum_0">Broad spectrum antibiotics &gt; 4 hrs prior to birth</label><br><input id="MainContent_InfectionProbabilityCalculations_rbIntrapartum_1" type="radio" name="ctl00$MainContent$InfectionProbabilityCalculations$rbIntrapartum" value="Broad spectrum antibiotics 2-3.9 hrs prior to birth" tabindex="8"><label for="MainContent_InfectionProbabilityCalculations_rbIntrapartum_1">Broad spectrum antibiotics 2-3.9 hrs prior to birth</label><br><input id="MainContent_InfectionProbabilityCalculations_rbIntrapartum_2" type="radio" name="ctl00$MainContent$InfectionProbabilityCalculations$rbIntrapartum" value="GBS specific antibiotics &gt; 2 hrs prior to birth" tabindex="8"><label for="MainContent_InfectionProbabilityCalculations_rbIntrapartum_2">GBS specific antibiotics &gt; 2 hrs prior to birth</label><br><input id="MainContent_InfectionProbabilityCalculations_rbIntrapartum_3" type="radio" name="ctl00$MainContent$InfectionProbabilityCalculations$rbIntrapartum" value="No antibiotics or any antibiotics &lt; 2 hrs prior to birth" tabindex="8"><label for="MainContent_InfectionProbabilityCalculations_rbIntrapartum_3">No antibiotics or any antibiotics &lt; 2 hrs prior to birth</label></span>                                 
-                                    
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-
-                <!-- Result Section -->
-                <div class="col-md-7">
-                    <!-- Buttons -->
-                    <div style="padding-top: 40px;">
-                        <input type="submit" name="ctl00$MainContent$InfectionProbabilityCalculations$btnCalc" value="Calculate »" onclick='javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions("ctl00$MainContent$InfectionProbabilityCalculations$btnCalc", "", true, "valGroup", "", false, false))' id="MainContent_InfectionProbabilityCalculations_btnCalc" tabindex="9" class="btn btn-lg btn-primary active" data-toggle="tooltip" title="" data-original-title="This will display the predicted probability per 1000 babies based on the entered maternal predictors.">&nbsp;&nbsp;                     
-                        <input type="submit" name="ctl00$MainContent$InfectionProbabilityCalculations$btnClear" value="Clear" id="MainContent_InfectionProbabilityCalculations_btnClear" tabindex="10" class="btn btn-lg btn-warning" data-toggle="tooltip" title="" data-original-title="This will clear all maternal predictors!">
-                    </div>
-                    <p></p>
-
-                    <div class="panel panel-default" style="background-color: #e0e0e0;">
-                        <div class="panel-body">
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <table class="table table-bordered">
-                                        <thead>
-                                            <tr>
-                                                <th colspan="2">Risk per 1000/births</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td class="td-title wid40">EOS Risk @ Birth</td>
-                                                <td class="td-cell-wht  td-cell-middle td-cell-center wid60">       
-                                                    <span id="MainContent_InfectionProbabilityCalculations_lblEOS" class="ResultFont"></span>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
+                          <tr>
+                            <td class="td-title">
+                              Incidence of Early-Onset Sepsis&nbsp;<a
+                                href=""
+                                data-toggle="tooltip"
+                                title=""
+                                data-original-title="Select rate of Early-Onset Sepsis at Your institution. KPNC rate =.3/1000 live births and CDC National rate = .5/1000 live births."
+                                ><span
+                                  class="glyphicon glyphicon-question-sign"
+                                ></span
+                              ></a>
+                            </td>
+                            <td>
+                              <select
+                                name="ctl00$MainContent$InfectionProbabilityCalculations$ddlIncidence"
+                                id="MainContent_InfectionProbabilityCalculations_ddlIncidence"
+                                tabindex="1"
+                                class="form-control"
+                              >
+                                <option selected="selected" value="0"></option>
+                                <option value="38.952265">
+                                  0.1/1000 live births
+                                </option>
+                                <option value="39.646367">
+                                  0.2/1000 live births
+                                </option>
+                                <option value="40.05280">
+                                  0.3/1000 live births (KPNC incidence)
+                                </option>
+                                <option value="40.34150">
+                                  0.4/1000 live births
+                                </option>
+                                <option value="40.56560">
+                                  0.5/1000 live births (CDC national incidence)
+                                </option>
+                                <option value="40.74890">
+                                  0.6/1000 live births
+                                </option>
+                                <option value="40.903919">
+                                  0.7/1000 live births
+                                </option>
+                                <option value="41.0384">
+                                  0.8/1000 live births
+                                </option>
+                                <option value="41.1571">
+                                  0.9/1000 live births
+                                </option>
+                                <option value="41.263432">
+                                  1/1000 live births
+                                </option>
+                                <option value="41.965852">
+                                  2/1000 live births
+                                </option>
+                                <option value="42.676976">
+                                  4/1000 live births
+                                </option>
+                              </select>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="td-title">
+                              Gestational age&nbsp;<a
+                                href=""
+                                data-toggle="tooltip"
+                                title=""
+                                data-original-title="To the nearest week and day."
+                                ><span
+                                  class="glyphicon glyphicon-question-sign"
+                                ></span
+                              ></a>
+                            </td>
+                            <td>
+                              <div class="input-group">
+                                <input
+                                  name="ctl00$MainContent$InfectionProbabilityCalculations$txtGestational"
+                                  maxlength="2"
+                                  id="MainContent_InfectionProbabilityCalculations_txtGestational"
+                                  tabindex="2"
+                                  class="form-control"
+                                  onkeydown="disableKeyPress();"
+                                  type="number"
+                                />
+                                <span
+                                  class="input-group-addon"
+                                  style="width: 65px"
+                                  >weeks</span
+                                >
+                              </div>
+                              <div class="input-group">
+                                <input
+                                  name="ctl00$MainContent$InfectionProbabilityCalculations$txtDays"
+                                  maxlength="1"
+                                  id="MainContent_InfectionProbabilityCalculations_txtDays"
+                                  tabindex="3"
+                                  class="form-control"
+                                  onkeydown="disableKeyPress()"
+                                  type="number"
+                                />
+                                <span
+                                  class="input-group-addon"
+                                  style="width: 65px"
+                                  >days</span
+                                >
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="td-title">
+                              Highest maternal antepartum temperature&nbsp;<a
+                                href=""
+                                data-toggle="tooltip"
+                                title=""
+                                data-original-title="To the nearest 0.1 degree. Be sure to choose Fahrenheit or Celsius."
+                                ><span
+                                  class="glyphicon glyphicon-question-sign"
+                                ></span
+                              ></a>
+                            </td>
+                            <td>
+                              <div
+                                class="col-lg-6"
+                                style="padding-left: 0px; max-width: 200px"
+                              >
+                                <div class="input-group">
+                                  <input
+                                    name="ctl00$MainContent$InfectionProbabilityCalculations$txtTemperature"
+                                    maxlength="5"
+                                    id="MainContent_InfectionProbabilityCalculations_txtTemperature"
+                                    tabindex="4"
+                                    class="form-control"
+                                    onkeydown="disableKeyPress()"
+                                    type="number"
+                                    step="any"
+                                    style="min-width: 83px"
+                                  />
+                                  <div class="input-group-btn">
+                                    <select
+                                      name="ctl00$MainContent$InfectionProbabilityCalculations$ddlFarCal"
+                                      id="MainContent_InfectionProbabilityCalculations_ddlFarCal"
+                                      tabindex="5"
+                                      class="form-control"
+                                    >
+                                      <option selected="selected" value="F">
+                                        Fahrenheit
+                                      </option>
+                                      <option value="C">Celsius</option>
+                                    </select>
+                                  </div>
                                 </div>
-                            </div>
+                              </div>
 
-                            <div id="Table1">
-                                <table class="table table-bordered">
-                                    <thead>
-                                        <tr>
-                                            <th class="wid40">EOS Risk after Clinical Exam</th>
-                                            <th>Risk per 1000/births</th>
-                                            <th>Clinical Recommendation</th>
-                                            <th>Vitals</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td class="td-title td-cell-middle ">Well Appearing</td>
-                                            <td class="td-cell-wht td-cell-middle td-cell-center">
-                                                <span id="MainContent_InfectionProbabilityCalculations_lblWellAppearing" class="ResultFont"></span>
-                                            </td>
-                                            <td id="MainContent_InfectionProbabilityCalculations_row1Col3" class="td-cell-wht td-cell-middle">
-                                                <span id="MainContent_InfectionProbabilityCalculations_lblWellAppearingRecommendation"></span>
-                                            </td>
-			
-                                            <td id="MainContent_InfectionProbabilityCalculations_row1Col4" class="td-cell-wht td-cell-middle">
-                                                <span id="MainContent_InfectionProbabilityCalculations_lblWellAppearingVitals"></span>
-                                            </td>
-			
-                                        </tr>
-                                        <tr>
-                                            <td class="td-title">Equivocal</td>
-                                            <td class="td-cell-wht  td-cell-middle td-cell-center">
-                                                <span id="MainContent_InfectionProbabilityCalculations_lblEquivocal" class="ResultFont"></span>
-                                            </td>
-                                            <td id="MainContent_InfectionProbabilityCalculations_row2Col3" class="td-cell-wht">
-                                                <span id="MainContent_InfectionProbabilityCalculations_lblEquivocalRecommendation"></span>
-                                            </td>
-			
-                                            <td id="MainContent_InfectionProbabilityCalculations_row2Col4" class="td-cell-wht">
-                                                <span id="MainContent_InfectionProbabilityCalculations_lblEquivocalVitals"></span>
-                                            </td>
-			
-                                        </tr>
-                                        <tr>
-                                            <td class="td-title">Clinical Illness</td>
-                                            <td class="td-cell-wht  td-cell-middle td-cell-center">
-                                                <span id="MainContent_InfectionProbabilityCalculations_lblClinical" class="ResultFont"></span>
-                                            </td>
-                                            <td id="MainContent_InfectionProbabilityCalculations_row3Col3" class="td-cell-wht">
-                                                <span id="MainContent_InfectionProbabilityCalculations_lblClinicalRecommendation"></span>
-                                            </td>
-			
-                                            <td id="MainContent_InfectionProbabilityCalculations_row3Col4" class="td-cell-wht">
-                                                <span id="MainContent_InfectionProbabilityCalculations_lblClinicalVitals"></span>
-                                            </td>
-			
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-
-                            <!--iPhone Version-->
-                            <div id="Table2">
-                                <table class="table table-bordered">
-                                    <thead>
-                                        <tr>
-                                            <th class="wid40">EOS Risk after Clinical Exam</th>
-                                            <th class="wid60">Risk per 1000/births</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td class="td-title">Well Appearing</td>
-                                            <td class="td-cell-wht td-cell-middle td-cell-center">
-                                                <span id="MainContent_InfectionProbabilityCalculations_lblWellAppearing2" class="ResultFont"></span>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="td-title">Equivocal</td>
-                                            <td class="td-cell-wht  td-cell-middle td-cell-center">
-                                                <span id="MainContent_InfectionProbabilityCalculations_lblEquivocal2" class="ResultFont"></span>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="td-title">Clinical Illness</td>
-                                            <td class="td-cell-wht  td-cell-middle td-cell-center">
-                                                <span id="MainContent_InfectionProbabilityCalculations_lblClinical2" class="ResultFont"></span>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-
-                                <!-- T2 -->
-                                <table class="table table-bordered">
-                                    <thead>
-                                        <tr>
-                                            <th class="wid40">EOS Risk after Clinical Exam</th>
-                                            <th class="wid60">Clinical Recommendation</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td class="td-title">Well Appearing</td>
-                                            <td id="MainContent_InfectionProbabilityCalculations_t2row1col2" class="td-cell-wht td-cell-middle">
-                                                <span id="MainContent_InfectionProbabilityCalculations_lblWellAppearingRecommendation2"></span>
-                                            </td>
-			
-                                        </tr>
-                                        <tr>
-                                            <td class="td-title">Equivocal</td>
-                                            <td id="MainContent_InfectionProbabilityCalculations_t2row2col2" class="td-cell-wht">
-                                                <span id="MainContent_InfectionProbabilityCalculations_lblEquivocalRecommendation2"></span>
-                                            </td>
-			
-                                        </tr>
-                                        <tr>
-                                            <td class="td-title">Clinical Illness</td>
-                                            <td id="MainContent_InfectionProbabilityCalculations_t2row3col2" class="td-cell-wht">
-                                                <span id="MainContent_InfectionProbabilityCalculations_lblClinicalRecommendation2"></span>
-                                            </td>
-			
-                                        </tr>
-                                    </tbody>
-                                </table>
-
-                                <!-- T3 -->
-                                <table class="table table-bordered">
-                                    <thead>
-                                        <tr>
-                                            <th class="wid40">EOS Risk after Clinical Exam</th>
-                                            <th class="wid60">Vitals</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td class="td-title">Well Appearing</td>
-                                            <td id="MainContent_InfectionProbabilityCalculations_t3row1col2" class="td-cell-wht td-cell-middle">
-                                                <span id="MainContent_InfectionProbabilityCalculations_lblWellAppearingVitals2"></span>
-                                            </td>
-			
-                                        </tr>
-                                        <tr>
-                                            <td class="td-title">Equivocal</td>
-                                            <td id="MainContent_InfectionProbabilityCalculations_t3row2col2" class="td-cell-wht">
-                                                <span id="MainContent_InfectionProbabilityCalculations_lblEquivocalVitals2"></span>
-                                            </td>
-			
-                                        </tr>
-                                        <tr>
-                                            <td class="td-title">Clinical Illness</td>
-                                            <td id="MainContent_InfectionProbabilityCalculations_t3row3col2" class="td-cell-wht">
-                                                <span id="MainContent_InfectionProbabilityCalculations_lblClinicalVitals2"></span>
-                                            </td>
-			
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-
-                            <!-- Classification Links -->
-                            <span class="font14" style="color: #333;">Classification of Infant's Clinical Presentation</span>
-                            <div class="label"><a id="MainContent_InfectionProbabilityCalculations_HyperLink1" href="" target="_blank">Clinical Illness</a></div>
-                            <div class="label"><a id="MainContent_InfectionProbabilityCalculations_HyperLink2" href="" target="_blank">Equivocal</a></div>
-                            <div class="label"><a id="MainContent_InfectionProbabilityCalculations_HyperLink3" href="" target="_blank">Well Appearing</a></div> 
-                        </div>
+                              <div
+                                id="MainContent_InfectionProbabilityCalculations_UpdatePanel2"
+                              ></div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="td-title">
+                              ROM (Hours)&nbsp;<a
+                                href=""
+                                data-toggle="tooltip"
+                                title=""
+                                data-original-title="Duration of rupture of membranes. (In hours to the nearest 0.1 hour.)"
+                                ><span
+                                  class="glyphicon glyphicon-question-sign"
+                                ></span
+                              ></a>
+                            </td>
+                            <td>
+                              <input
+                                name="ctl00$MainContent$InfectionProbabilityCalculations$txtROM"
+                                maxlength="3"
+                                id="MainContent_InfectionProbabilityCalculations_txtROM"
+                                tabindex="6"
+                                class="form-control"
+                                onkeydown="disableKeyPress()"
+                                type="number"
+                                step="any"
+                              />
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="td-title">
+                              Maternal GBS status&nbsp;<a
+                                href=""
+                                data-toggle="tooltip"
+                                title=""
+                                data-original-title="Choose GBS positive, negative or unknown."
+                                ><span
+                                  class="glyphicon glyphicon-question-sign"
+                                ></span
+                              ></a>
+                            </td>
+                            <td>
+                              <span
+                                id="MainContent_InfectionProbabilityCalculations_rbGBS"
+                                class="radio"
+                                ><input
+                                  id="MainContent_InfectionProbabilityCalculations_rbGBS_0"
+                                  type="radio"
+                                  name="ctl00$MainContent$InfectionProbabilityCalculations$rbGBS"
+                                  value="0"
+                                  tabindex="7"
+                                /><label
+                                  for="MainContent_InfectionProbabilityCalculations_rbGBS_0"
+                                  >Negative</label
+                                ><br /><input
+                                  id="MainContent_InfectionProbabilityCalculations_rbGBS_1"
+                                  type="radio"
+                                  name="ctl00$MainContent$InfectionProbabilityCalculations$rbGBS"
+                                  value="1"
+                                  tabindex="7"
+                                /><label
+                                  for="MainContent_InfectionProbabilityCalculations_rbGBS_1"
+                                  >Positive</label
+                                ><br /><input
+                                  id="MainContent_InfectionProbabilityCalculations_rbGBS_2"
+                                  type="radio"
+                                  name="ctl00$MainContent$InfectionProbabilityCalculations$rbGBS"
+                                  value="2"
+                                  tabindex="7"
+                                /><label
+                                  for="MainContent_InfectionProbabilityCalculations_rbGBS_2"
+                                  >Unknown</label
+                                ></span
+                              >
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="td-title">
+                              Type of intrapartum antibiotics&nbsp;<a
+                                href=""
+                                data-toggle="tooltip"
+                                title=""
+                                data-original-title="Please select only 1 category. If both Broad spectrum and GBS-specific intrapartum antibiotics were given, please select the appropriate timing among the Broad spectrum categories."
+                                ><span
+                                  class="glyphicon glyphicon-question-sign"
+                                ></span
+                              ></a>
+                            </td>
+                            <td>
+                              <span
+                                id="MainContent_InfectionProbabilityCalculations_rbIntrapartum"
+                                class="radio"
+                                ><input
+                                  id="MainContent_InfectionProbabilityCalculations_rbIntrapartum_0"
+                                  type="radio"
+                                  name="ctl00$MainContent$InfectionProbabilityCalculations$rbIntrapartum"
+                                  value="Broad spectrum antibiotics &gt; 4 hrs prior to birth"
+                                  tabindex="8"
+                                /><label
+                                  for="MainContent_InfectionProbabilityCalculations_rbIntrapartum_0"
+                                  >Broad spectrum antibiotics &gt; 4 hrs prior
+                                  to birth</label
+                                ><br /><input
+                                  id="MainContent_InfectionProbabilityCalculations_rbIntrapartum_1"
+                                  type="radio"
+                                  name="ctl00$MainContent$InfectionProbabilityCalculations$rbIntrapartum"
+                                  value="Broad spectrum antibiotics 2-3.9 hrs prior to birth"
+                                  tabindex="8"
+                                /><label
+                                  for="MainContent_InfectionProbabilityCalculations_rbIntrapartum_1"
+                                  >Broad spectrum antibiotics 2-3.9 hrs prior to
+                                  birth</label
+                                ><br /><input
+                                  id="MainContent_InfectionProbabilityCalculations_rbIntrapartum_2"
+                                  type="radio"
+                                  name="ctl00$MainContent$InfectionProbabilityCalculations$rbIntrapartum"
+                                  value="GBS specific antibiotics &gt; 2 hrs prior to birth"
+                                  tabindex="8"
+                                /><label
+                                  for="MainContent_InfectionProbabilityCalculations_rbIntrapartum_2"
+                                  >GBS specific antibiotics &gt; 2 hrs prior to
+                                  birth</label
+                                ><br /><input
+                                  id="MainContent_InfectionProbabilityCalculations_rbIntrapartum_3"
+                                  type="radio"
+                                  name="ctl00$MainContent$InfectionProbabilityCalculations$rbIntrapartum"
+                                  value="No antibiotics or any antibiotics &lt; 2 hrs prior to birth"
+                                  tabindex="8"
+                                /><label
+                                  for="MainContent_InfectionProbabilityCalculations_rbIntrapartum_3"
+                                  >No antibiotics or any antibiotics &lt; 2 hrs
+                                  prior to birth</label
+                                ></span
+                              >
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
                     </div>
+
+                    <!-- Result Section -->
+                    <div class="col-md-7">
+                      <!-- Buttons -->
+                      <div style="padding-top: 40px">
+                        <input
+                          type="submit"
+                          name="ctl00$MainContent$InfectionProbabilityCalculations$btnCalc"
+                          value="Calculate »"
+                          id="MainContent_InfectionProbabilityCalculations_btnCalc"
+                          tabindex="9"
+                          class="btn btn-lg btn-primary active"
+                          data-toggle="tooltip"
+                          title=""
+                          data-original-title="This will display the predicted probability per 1000 babies based on the entered maternal predictors."
+                        />&nbsp;&nbsp;
+                        <input
+                          type="submit"
+                          name="ctl00$MainContent$InfectionProbabilityCalculations$btnClear"
+                          value="Clear"
+                          id="MainContent_InfectionProbabilityCalculations_btnClear"
+                          tabindex="10"
+                          class="btn btn-lg btn-warning"
+                          data-toggle="tooltip"
+                          title=""
+                          data-original-title="This will clear all maternal predictors!"
+                        />
+                      </div>
+                      <p></p>
+
+                      <div
+                        class="panel panel-default"
+                        style="background-color: #e0e0e0"
+                      >
+                        <div class="panel-body">
+                          <div class="row">
+                            <div class="col-md-12">
+                              <table class="table table-bordered">
+                                <thead>
+                                  <tr>
+                                    <th colspan="2">Risk per 1000/births</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td class="td-title wid40">
+                                      EOS Risk @ Birth
+                                    </td>
+                                    <td
+                                      class="td-cell-wht td-cell-middle td-cell-center wid60"
+                                    >
+                                      <span
+                                        id="MainContent_InfectionProbabilityCalculations_lblEOS"
+                                        class="ResultFont"
+                                      ></span>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+
+                          <div id="Table1">
+                            <table class="table table-bordered">
+                              <thead>
+                                <tr>
+                                  <th class="wid40">
+                                    EOS Risk after Clinical Exam
+                                  </th>
+                                  <th>Risk per 1000/births</th>
+                                  <th>Clinical Recommendation</th>
+                                  <th>Vitals</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td class="td-title td-cell-middle">
+                                    Well Appearing
+                                  </td>
+                                  <td
+                                    class="td-cell-wht td-cell-middle td-cell-center"
+                                  >
+                                    <span
+                                      id="MainContent_InfectionProbabilityCalculations_lblWellAppearing"
+                                      class="ResultFont"
+                                    ></span>
+                                  </td>
+                                  <td
+                                    id="MainContent_InfectionProbabilityCalculations_row1Col3"
+                                    class="td-cell-wht td-cell-middle"
+                                  >
+                                    <span
+                                      id="MainContent_InfectionProbabilityCalculations_lblWellAppearingRecommendation"
+                                    ></span>
+                                  </td>
+
+                                  <td
+                                    id="MainContent_InfectionProbabilityCalculations_row1Col4"
+                                    class="td-cell-wht td-cell-middle"
+                                  >
+                                    <span
+                                      id="MainContent_InfectionProbabilityCalculations_lblWellAppearingVitals"
+                                    ></span>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td class="td-title">Equivocal</td>
+                                  <td
+                                    class="td-cell-wht td-cell-middle td-cell-center"
+                                  >
+                                    <span
+                                      id="MainContent_InfectionProbabilityCalculations_lblEquivocal"
+                                      class="ResultFont"
+                                    ></span>
+                                  </td>
+                                  <td
+                                    id="MainContent_InfectionProbabilityCalculations_row2Col3"
+                                    class="td-cell-wht"
+                                  >
+                                    <span
+                                      id="MainContent_InfectionProbabilityCalculations_lblEquivocalRecommendation"
+                                    ></span>
+                                  </td>
+
+                                  <td
+                                    id="MainContent_InfectionProbabilityCalculations_row2Col4"
+                                    class="td-cell-wht"
+                                  >
+                                    <span
+                                      id="MainContent_InfectionProbabilityCalculations_lblEquivocalVitals"
+                                    ></span>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td class="td-title">Clinical Illness</td>
+                                  <td
+                                    class="td-cell-wht td-cell-middle td-cell-center"
+                                  >
+                                    <span
+                                      id="MainContent_InfectionProbabilityCalculations_lblClinical"
+                                      class="ResultFont"
+                                    ></span>
+                                  </td>
+                                  <td
+                                    id="MainContent_InfectionProbabilityCalculations_row3Col3"
+                                    class="td-cell-wht"
+                                  >
+                                    <span
+                                      id="MainContent_InfectionProbabilityCalculations_lblClinicalRecommendation"
+                                    ></span>
+                                  </td>
+
+                                  <td
+                                    id="MainContent_InfectionProbabilityCalculations_row3Col4"
+                                    class="td-cell-wht"
+                                  >
+                                    <span
+                                      id="MainContent_InfectionProbabilityCalculations_lblClinicalVitals"
+                                    ></span>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+
+                          <!--iPhone Version-->
+                          <div id="Table2">
+                            <table class="table table-bordered">
+                              <thead>
+                                <tr>
+                                  <th class="wid40">
+                                    EOS Risk after Clinical Exam
+                                  </th>
+                                  <th class="wid60">Risk per 1000/births</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td class="td-title">Well Appearing</td>
+                                  <td
+                                    class="td-cell-wht td-cell-middle td-cell-center"
+                                  >
+                                    <span
+                                      id="MainContent_InfectionProbabilityCalculations_lblWellAppearing2"
+                                      class="ResultFont"
+                                    ></span>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td class="td-title">Equivocal</td>
+                                  <td
+                                    class="td-cell-wht td-cell-middle td-cell-center"
+                                  >
+                                    <span
+                                      id="MainContent_InfectionProbabilityCalculations_lblEquivocal2"
+                                      class="ResultFont"
+                                    ></span>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td class="td-title">Clinical Illness</td>
+                                  <td
+                                    class="td-cell-wht td-cell-middle td-cell-center"
+                                  >
+                                    <span
+                                      id="MainContent_InfectionProbabilityCalculations_lblClinical2"
+                                      class="ResultFont"
+                                    ></span>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+
+                            <!-- T2 -->
+                            <table class="table table-bordered">
+                              <thead>
+                                <tr>
+                                  <th class="wid40">
+                                    EOS Risk after Clinical Exam
+                                  </th>
+                                  <th class="wid60">Clinical Recommendation</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td class="td-title">Well Appearing</td>
+                                  <td
+                                    id="MainContent_InfectionProbabilityCalculations_t2row1col2"
+                                    class="td-cell-wht td-cell-middle"
+                                  >
+                                    <span
+                                      id="MainContent_InfectionProbabilityCalculations_lblWellAppearingRecommendation2"
+                                    ></span>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td class="td-title">Equivocal</td>
+                                  <td
+                                    id="MainContent_InfectionProbabilityCalculations_t2row2col2"
+                                    class="td-cell-wht"
+                                  >
+                                    <span
+                                      id="MainContent_InfectionProbabilityCalculations_lblEquivocalRecommendation2"
+                                    ></span>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td class="td-title">Clinical Illness</td>
+                                  <td
+                                    id="MainContent_InfectionProbabilityCalculations_t2row3col2"
+                                    class="td-cell-wht"
+                                  >
+                                    <span
+                                      id="MainContent_InfectionProbabilityCalculations_lblClinicalRecommendation2"
+                                    ></span>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+
+                            <!-- T3 -->
+                            <table class="table table-bordered">
+                              <thead>
+                                <tr>
+                                  <th class="wid40">
+                                    EOS Risk after Clinical Exam
+                                  </th>
+                                  <th class="wid60">Vitals</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td class="td-title">Well Appearing</td>
+                                  <td
+                                    id="MainContent_InfectionProbabilityCalculations_t3row1col2"
+                                    class="td-cell-wht td-cell-middle"
+                                  >
+                                    <span
+                                      id="MainContent_InfectionProbabilityCalculations_lblWellAppearingVitals2"
+                                    ></span>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td class="td-title">Equivocal</td>
+                                  <td
+                                    id="MainContent_InfectionProbabilityCalculations_t3row2col2"
+                                    class="td-cell-wht"
+                                  >
+                                    <span
+                                      id="MainContent_InfectionProbabilityCalculations_lblEquivocalVitals2"
+                                    ></span>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td class="td-title">Clinical Illness</td>
+                                  <td
+                                    id="MainContent_InfectionProbabilityCalculations_t3row3col2"
+                                    class="td-cell-wht"
+                                  >
+                                    <span
+                                      id="MainContent_InfectionProbabilityCalculations_lblClinicalVitals2"
+                                    ></span>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+
+                          <!-- Classification Links -->
+                          <span class="font14" style="color: #333"
+                            >Classification of Infant's Clinical
+                            Presentation</span
+                          >
+                          <div class="label">
+                            <a
+                              id="MainContent_InfectionProbabilityCalculations_HyperLink1"
+                              href=""
+                              target="_blank"
+                              >Clinical Illness</a
+                            >
+                          </div>
+                          <div class="label">
+                            <a
+                              id="MainContent_InfectionProbabilityCalculations_HyperLink2"
+                              href=""
+                              target="_blank"
+                              >Equivocal</a
+                            >
+                          </div>
+                          <div class="label">
+                            <a
+                              id="MainContent_InfectionProbabilityCalculations_HyperLink3"
+                              href=""
+                              target="_blank"
+                              >Well Appearing</a
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--row-->
                 </div>
-            </div><!--row-->
+              </div>
+            </div>
+          </div>
+
+          <input
+            type="submit"
+            name="ctl00$MainContent$btnDefault"
+            value=""
+            id="MainContent_btnDefault"
+            style="display: none"
+          />
         </div>
-    </div>
 
-		</div>                                
-            
-	</div>   
-         
-        <input type="submit" name="ctl00$MainContent$btnDefault" value="" id="MainContent_btnDefault" style="display:none">
-    
-</div>
-            
-            <div class="alert alert-info font14">
-                <strong class="font14">Contact us!</strong> Send your e-mail at <a href="" target="_top">PerinatalResearchUnit@kp.org</a>&nbsp;<span class="glyphicon glyphicon-envelope"></span>
-            </div>            
-            <footer>                
-                <p>© Copyright 2021 <a href="" target="_blank">Kaiser Permanente</a> <a href="" target="_blank">Division of Research</a>, All Rights Reserved</p>        
-            </footer>
-        </div>        
-    
+        <div class="alert alert-info font14">
+          <strong class="font14">Contact us!</strong> Send your e-mail at
+          <a href="" target="_top">PerinatalResearchUnit@kp.org</a>&nbsp;<span
+            class="glyphicon glyphicon-envelope"
+          ></span>
+        </div>
+        <footer>
+          <p>
+            © Copyright 2021
+            <a href="http://www.kp.org/" target="_blank">Kaiser Permanente</a>
+            <a
+              href="http://divisionofresearch.kaiserpermanente.org/"
+              target="_blank"
+              >Division of Research</a
+            >, All Rights Reserved
+          </p>
+        </footer>
+      </div>
 
-<script type="text/javascript">
-//<![CDATA[
-Sys.Application.add_init(function() {
-    $create(Sys.Extended.UI.FilteredTextBoxBehavior, {"filterType":2,"id":"MainContent_InfectionProbabilityCalculations_FilteredTextBoxExtender1"}, null, null, $get("MainContent_InfectionProbabilityCalculations_txtGestational"));
-});
-Sys.Application.add_init(function() {
-    $create(Sys.Extended.UI.FilteredTextBoxBehavior, {"filterType":2,"id":"MainContent_InfectionProbabilityCalculations_FilteredTextBoxExtender2"}, null, null, $get("MainContent_InfectionProbabilityCalculations_txtDays"));
-});
-Sys.Application.add_init(function() {
-    $create(Sys.Extended.UI.FilteredTextBoxBehavior, {"id":"MainContent_InfectionProbabilityCalculations_FilteredTextBoxExtender3","validChars":"0123456789."}, null, null, $get("MainContent_InfectionProbabilityCalculations_txtTemperature"));
-});
-Sys.Application.add_init(function() {
-    $create(Sys.Extended.UI.FilteredTextBoxBehavior, {"id":"MainContent_InfectionProbabilityCalculations_FilteredTextBoxExtender5","validChars":"0123456789."}, null, null, $get("MainContent_InfectionProbabilityCalculations_txtROM"));
-});
-//]]>
-</script>
-</form>
+      <script type="text/javascript">
+        //<![CDATA[
+        Sys.Application.add_init(function () {
+          $create(
+            Sys.Extended.UI.FilteredTextBoxBehavior,
+            {
+              filterType: 2,
+              id: "MainContent_InfectionProbabilityCalculations_FilteredTextBoxExtender1",
+            },
+            null,
+            null,
+            $get("MainContent_InfectionProbabilityCalculations_txtGestational")
+          );
+        });
+        Sys.Application.add_init(function () {
+          $create(
+            Sys.Extended.UI.FilteredTextBoxBehavior,
+            {
+              filterType: 2,
+              id: "MainContent_InfectionProbabilityCalculations_FilteredTextBoxExtender2",
+            },
+            null,
+            null,
+            $get("MainContent_InfectionProbabilityCalculations_txtDays")
+          );
+        });
+        Sys.Application.add_init(function () {
+          $create(
+            Sys.Extended.UI.FilteredTextBoxBehavior,
+            {
+              id: "MainContent_InfectionProbabilityCalculations_FilteredTextBoxExtender3",
+              validChars: "0123456789.",
+            },
+            null,
+            null,
+            $get("MainContent_InfectionProbabilityCalculations_txtTemperature")
+          );
+        });
+        Sys.Application.add_init(function () {
+          $create(
+            Sys.Extended.UI.FilteredTextBoxBehavior,
+            {
+              id: "MainContent_InfectionProbabilityCalculations_FilteredTextBoxExtender5",
+              validChars: "0123456789.",
+            },
+            null,
+            null,
+            $get("MainContent_InfectionProbabilityCalculations_txtROM")
+          );
+        });
+        //]]>
+      </script>
+    </form>
 
+    <script type="text/javascript">
+      function formSubmit(event) {
+        event.preventDefault();
 
-</body></html>
-<!--
-     FILE ARCHIVED ON 17:02:02 Oct 26, 2021 AND RETRIEVED FROM THE
-     INTERNET ARCHIVE ON 02:43:37 Sep 11, 2022.
-     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+        // TODO: add form validator
 
-     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
-     SECTION 108(a)(3)).
--->
-<!--
-playback timings (ms):
-  captures_list: 433.233
-  exclusion.robots: 0.078
-  exclusion.robots.policy: 0.071
-  cdx.remote: 0.056
-  esindex: 0.008
-  LoadShardBlock: 283.459 (3)
-  PetaboxLoader3.datanode: 276.357 (4)
-  CDXLines.iter: 15.296 (3)
-  load_resource: 69.438
-  PetaboxLoader3.resolve: 19.747
--->
+        let incidence_of_eos = parseFloat(
+          event.target[
+            "MainContent_InfectionProbabilityCalculations_ddlIncidence"
+          ].value
+        );
+        let gestational_age_weeks = parseFloat(
+          event.target[
+            "MainContent_InfectionProbabilityCalculations_txtGestational"
+          ].value
+        );
+        let gestational_age_days = parseFloat(
+          event.target["MainContent_InfectionProbabilityCalculations_txtDays"]
+            .value
+        );
+        let highest_temp = parseFloat(
+          event.target[
+            "MainContent_InfectionProbabilityCalculations_txtTemperature"
+          ].value
+        );
+        let rupture_of_membrane = parseFloat(
+          event.target["MainContent_InfectionProbabilityCalculations_txtROM"]
+            .value
+        );
+        let gbs_negative =
+          event.target["MainContent_InfectionProbabilityCalculations_rbGBS_0"]
+            .checked;
+        let gbs_positive =
+          event.target["MainContent_InfectionProbabilityCalculations_rbGBS_1"]
+            .checked;
+        let gbs_unknown =
+          event.target["MainContent_InfectionProbabilityCalculations_rbGBS_2"]
+            .checked;
+        let antibiotics_0 =
+          event.target[
+            "MainContent_InfectionProbabilityCalculations_rbIntrapartum_0"
+          ].checked;
+        let antibiotics_1 =
+          event.target[
+            "MainContent_InfectionProbabilityCalculations_rbIntrapartum_1"
+          ].checked;
+        let antibiotics_2 =
+          event.target[
+            "MainContent_InfectionProbabilityCalculations_rbIntrapartum_2"
+          ].checked;
+        let antibiotics_3 =
+          event.target[
+            "MainContent_InfectionProbabilityCalculations_rbIntrapartum_3"
+          ].checked;
+
+        // Conversion
+        gestational_age_weeks += gestational_age_days / 7;
+        rupture_of_membrane = (rupture_of_membrane + 0.05) ** 0.2; // not sure how this was calculated.
+
+        let approptx1 = 0;
+        if (antibiotics_1 || antibiotics_2) {
+          approptx1 = 1;
+        }
+
+        let approptx2 = 0;
+        if (antibiotics_0) {
+          approptx2 = 1;
+        }
+
+        let gbs_pos = 0;
+        if (gbs_positive) {
+          gbs_pos = 1;
+        }
+
+        let gbs_un = 0;
+        if (gbs_unknown) {
+          gbs_un = 1;
+        }
+
+        let bx = incidence_of_eos;
+        t = 0.868 * highest_temp;
+        bx += t;
+        t = -6.9325 * gestational_age_weeks;
+        bx += t;
+        t = 0.0877 * gestational_age_weeks ** 2;
+        bx += t;
+        t = 1.2256 * rupture_of_membrane;
+        bx += t;
+        t = -1.0488 * approptx1;
+        bx += t;
+        t = -1.1861 * approptx2;
+        bx += t;
+        t = 0.5771 * gbs_pos;
+        bx += t;
+        t = 0.0427 * gbs_un;
+        bx += t;
+        let srs = 1.0 / (1.0 + Math.exp(-bx));
+
+        console.log("Srs: " + srs);
+      }
+    </script>
+  </body>
+</html>
