@@ -1093,6 +1093,8 @@
         let srs = 1.0 / (1.0 + Math.exp(-bx));
 
         console.log("Srs: " + srs);
+
+        document.getElementById("MainContent_InfectionProbabilityCalculations_lblEOS").textContent = srs * 1000;
       }
     </script>
   </body>
